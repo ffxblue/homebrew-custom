@@ -1,9 +1,9 @@
 class CliBluestrap < Formula
   desc 'cli-bluestrap'
   homepage 'https://bitbucket.org/ffxblue/cli-bluestrap'
-  url 'https://s3-ap-southeast-2.amazonaws.com/cli-bluestrap.ffxblue.com.au/cli-bluestrap-0.68.2.tar.gz'
-  sha256 '1f41c582893ead46bc853026702db9e0dd475598867b876cab1ddbd511052ad7'
-  version '0.68.2'
+  url 'https://s3-ap-southeast-2.amazonaws.com/cli-bluestrap.ffxblue.com.au/cli-bluestrap-0.69.0.tar.gz'
+  sha256 '2bc4974658a85243d847585631186f9750aa0a8aa2374ab111d210eeb7042909'
+  version '0.69.0'
 
   # General
   depends_on 'awscli'
@@ -34,13 +34,8 @@ class CliBluestrap < Formula
     # For symlinking from user home into homebrew 'superenv'
     localuser = ENV["USER"]
 
-    # Install casks (can't use 'depends_on' yet)
-    system "brew cask install bitbar"
-    system "brew cask install docker"
-    system "brew cask install kitematic"
-
     # Check Docker is good to go
-    system "bin/check"
+    system "./check"
 
     # Get cli-bluestrap image
     ln_s "/Users/#{localuser}/.aws", "#{buildpath}/.brew_home/.aws"
@@ -53,7 +48,7 @@ class CliBluestrap < Formula
     system "docker", "pull", "175914186171.dkr.ecr.ap-southeast-2.amazonaws.com/tools/cli-bluestrap:#{version}"
 
     # Install Bitbar plugin
-    share.install Dir["bin/bitbar-*"]
+    share.install Dir["bitbar-*"]
 
     # Switch version and install bs
     inreplace "bs-wrapper", ":latest", ":#{version}"
