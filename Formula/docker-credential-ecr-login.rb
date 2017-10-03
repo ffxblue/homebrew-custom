@@ -6,7 +6,7 @@ class DockerCredentialEcrLogin < Formula
 
   homepage 'https://github.com/awslabs/amazon-ecr-credential-helper'
   url "https://github.com/awslabs/amazon-ecr-credential-helper/archive/#{VERSION}.tar.gz"
-  sha256 'f5bcc481812942d3314e38c2406b881c74ad0dabcb69707a0f7c55cdc95d1828'
+  sha256 '7de4e7663d7e9b884e69aff2b934a23a5411642a9e6a4322c6db0791e6061b60'
   version VERSION
   head 'https://github.com/awslabs/amazon-ecr-credential-helper.git', :branch => 'master'
   depends_on 'go' => :build
