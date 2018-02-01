@@ -1,12 +1,13 @@
 class CliBluestrap < Formula
   desc 'cli-bluestrap'
   homepage 'https://bitbucket.org/ffxblue/cli-bluestrap'
-  url 'https://s3-ap-southeast-2.amazonaws.com/cli-bluestrap.ffxblue.com.au/cli-bluestrap-1.2.0.tar.gz'
-  sha256 'cdf8874085adacb6cd27ed4acb8abbbe5a6c8f051654b44afe68e1e95e659ea4'
-  version '1.2.0'
+  url 'https://s3-ap-southeast-2.amazonaws.com/cli-bluestrap.ffxblue.com.au/cli-bluestrap-1.30.0.tar.gz'
+  sha256 '3dee568a42a585138f37aefc7444c16514739c48da91eda20adcb064038dd14d'
+  version '1.30.0'
 
   # General
   depends_on 'awscli'
+  depends_on 'direnv'
   depends_on 'git'
   depends_on 'jq'
   depends_on 'hostess'
@@ -30,6 +31,7 @@ class CliBluestrap < Formula
     # Use 'docker' instead of '/usr/local/bin/docker'
     ENV.prepend_path "PATH", "/usr/local/bin"
     # For ecr-helper
+    ENV["AWS_PROFILE"] = "ffxblue"
     ENV["AWS_SDK_LOAD_CONFIG"] = "true"
     # For symlinking from user home into homebrew 'superenv'
     localuser = ENV["USER"]
