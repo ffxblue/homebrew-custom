@@ -25,7 +25,7 @@ class DockerCredentialEcrLogin < Formula
   end
 
   def caveats
-    <<-EOS.undent
+    <<~EOS
       Set the contents of your ~/.docker/config.json file to be:
 
       {

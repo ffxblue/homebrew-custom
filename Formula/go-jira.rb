@@ -15,7 +15,7 @@ class GoJira < Formula
     bin.install "jira-darwin-10.6-amd64" => "jira"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     You will need to specify your local jira endpoint first, typically in your homedir like:
       mkdir ~/.jira.d
       cat <<EOM >~/.jira.d/config.yml
