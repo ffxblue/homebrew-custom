@@ -1,9 +1,9 @@
 class CliBluestrap < Formula
   desc 'cli-bluestrap'
   homepage 'https://bitbucket.org/ffxblue/cli-bluestrap'
-  url 'https://s3-ap-southeast-2.amazonaws.com/cli-bluestrap.ffxblue.com.au/cli-bluestrap-1.43.0.tar.gz'
-  sha256 'ca91cb4e11704877a7672c951392369c03beda2d593b29492d7930fd54827718'
-  version '1.43.0'
+  url 'https://s3-ap-southeast-2.amazonaws.com/cli-bluestrap.ffxblue.com.au/cli-bluestrap-1.45.0.tar.gz'
+  sha256 '550380a58d857296cf39fcb01889107bf10f638bc2f2a7634fe8b4a25474bf5b'
+  version '1.45.0'
 
   # General
   depends_on 'awscli'
