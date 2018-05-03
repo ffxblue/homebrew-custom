@@ -1,9 +1,9 @@
 class CliBluestrap < Formula
   desc 'cli-bluestrap'
   homepage 'https://bitbucket.org/ffxblue/cli-bluestrap'
-  url 'https://s3-ap-southeast-2.amazonaws.com/cli-bluestrap.ffxblue.com.au/cli-bluestrap-1.34.1.tar.gz'
-  sha256 'e55f92f032ee46c7765e097d6e66ebc4c198256a51ebeb6a5e0cb1a08c208d5e'
-  version '1.34.1'
+  url 'https://s3-ap-southeast-2.amazonaws.com/cli-bluestrap.ffxblue.com.au/cli-bluestrap-1.45.0.tar.gz'
+  sha256 '550380a58d857296cf39fcb01889107bf10f638bc2f2a7634fe8b4a25474bf5b'
+  version '1.45.0'
 
   # General
   depends_on 'awscli'
@@ -16,6 +16,7 @@ class CliBluestrap < Formula
   # Backend
   depends_on 'go'
   depends_on 'goenv'
+  depends_on 'dep'
   depends_on 'glide'
   depends_on 'openssl'    # api-auth
   depends_on 'libxmlsec1' # api-auth
