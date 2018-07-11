@@ -19,7 +19,8 @@ class KopsAT171 < Formula
   end
 
   depends_on "go" => :build
-  depends_on "ffxblue/custom/kubernetes-cli@1.7.6"
+  # Removed dependency to decouple version pinning
+  # depends_on "ffxblue/custom/kubernetes-cli@1.7.6"
 
   def install
     ENV["VERSION"] = version unless build.head?
