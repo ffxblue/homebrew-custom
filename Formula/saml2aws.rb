@@ -1,6 +1,6 @@
 require 'formula'
 
-class Saml2aws < Formula
+class Saml2awsAT262 < Formula
   homepage 'https://github.com/pavelnikolov/saml2aws'
   url 'https://github.com/pavelnikolov/saml2aws/releases/download/v2.6.2/saml2aws_2.6.2_darwin_amd64.tar.gz'
   version '2.6.2'
