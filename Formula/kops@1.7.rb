@@ -1,4 +1,4 @@
-class KopsAT171 < Formula
+class KopsAT17 < Formula
   desc "Production Grade K8s Installation, Upgrades, and Management"
   homepage "https://github.com/kubernetes/kops"
   url "https://github.com/kubernetes/kops/archive/1.7.1.tar.gz"
@@ -11,11 +11,6 @@ class KopsAT171 < Formula
     sha256 "6a027731d8100218a3527395037d27f975b34cde7fe9759f9c1160e71bec2357" => :high_sierra
     sha256 "c3033753fbc5ce230279dd08982db353cb50b5338a7e34e2ccc389ab1acc9c07" => :sierra
     sha256 "189a6f76f16e9df99d24a86803dfde236cd1408ad1567c7e80b565babce8a707" => :el_capitan
-  end
-
-  devel do
-    url "https://github.com/kubernetes/kops/archive/1.8.0-beta.1.tar.gz"
-    sha256 "81026d6c1cd7b3898a88275538a7842b4bd8387775937e0528ccb7b83948abf1"
   end
 
   depends_on "go" => :build
