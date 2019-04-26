@@ -13,7 +13,7 @@ class CliBluestrap < Formula
     prefix.install "Brewfile"
     prefix.install "config.json"
 
-    bin.compare_file('Brewfile', 'Brewfile')
+    compare_file('Brewfile', 'Brewfile')
   end
   test do
     system 'bs', 'help'
