@@ -11,7 +11,7 @@ class CliBluestrap < Formula
     include.install Dir["include/*"]
     prefix.install ".bluestrap"
     prefix.install "Brewfile"
-    prefix.install "config.json"
+    prefix.install "config.json"    
   end
   test do
     system 'bs', 'help'
