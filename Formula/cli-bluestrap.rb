@@ -2,7 +2,7 @@ class CliBluestrap < Formula
   desc 'cli-bluestrap'
   homepage 'https://bitbucket.org/ffxblue/cli-bluestrap'
   url 'https://s3-ap-southeast-2.amazonaws.com/cli-bluestrap.ffxblue.com.au/cli-bluestrap-testing.tar.gz'
-  sha256 'b4f75c2fe76e363405c475f3d1ad5c3d66eeb85f487bc39bb23c1f70d89cd08e'
+  sha256 '5119253e56f66d5481c9babf501e0df1026c72d7d881e9457fba250640cbd0ba'
   version 'testing'
   depends_on 'jq'
   def existing_version
@@ -37,7 +37,7 @@ class CliBluestrap < Formula
     compare_files(".bluestrap")
     compare_files("Brewfile")
     compare_files("config.json")
-    `bs upgrade-check '#{@@changed.to_json}'`
+    puts `bs upgrade-check '#{@@changed.to_json}'`
   end
   test do
     system 'bs', 'help'
