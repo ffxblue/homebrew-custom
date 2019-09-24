@@ -1,10 +1,10 @@
 class Pharod < Formula
-  VERSION = "1da9aa1a2d55412a7d262e6d22c032f051ac53b9"
+  VERSION = "f205619f661b3b01afe1bbf1f1652c37b5e27a88"
   desc "Fork of madebymany project"
   homepage "https://github.com/ffxblue/pharod"
   url "https://github.com/ffxblue/pharod/archive/#{VERSION}.tar.gz"
   version "#{VERSION}"
-  sha256 "38777071d28fa498959a41517bebc0dd0e5028f1c72a288d27dbd40a39a0663c"
+  sha256 "c98f659cedbdda8a76d654c1fae5a6c4ef76a16b7de76723cb4c6a3a775ac04f"
   head "https://github.com/ffxblue/pharod.git", :branch => "master"
   depends_on "go" => :build
   depends_on "goenv" => :build
