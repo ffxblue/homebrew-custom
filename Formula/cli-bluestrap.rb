@@ -1,9 +1,9 @@
 class CliBluestrap < Formula
   desc 'cli-bluestrap'
   homepage 'https://bitbucket.org/ffxblue/cli-bluestrap'
-  url 'https://s3-ap-southeast-2.amazonaws.com/cli-bluestrap.ffxblue.com.au/cli-bluestrap-2.66.2.tar.gz'
-  sha256 '0d5ed97baa1ae167ef5cc9d5de2736b6073c709afb93c9c3916197aaac3b06e4'
-  version '2.66.2'
+  url 'https://s3-ap-southeast-2.amazonaws.com/cli-bluestrap.ffxblue.com.au/cli-bluestrap-2.67.0.tar.gz'
+  sha256 '84ded17ad3af1f120371714ac96249d1532fbedf61392dcf2839f03d4d3b6980'
+  version '2.67.0'
   depends_on 'jq'
   def install
     bin.install "bin/bs"
