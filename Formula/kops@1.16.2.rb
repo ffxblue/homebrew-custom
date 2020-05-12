@@ -1,21 +1,16 @@
-class KopsAT17 < Formula
+class KopsAT1162 < Formula
   desc "Production Grade K8s Installation, Upgrades, and Management"
   homepage "https://github.com/kubernetes/kops"
-  url "https://github.com/kubernetes/kops/archive/1.7.1.tar.gz"
-  sha256 "044c5c7a737ed3acf53517e64bb27d3da8f7517d2914df89efeeaf84bc8a722a"
+  url "https://github.com/kubernetes/kops/archive/1.16.2.tar.gz"
+  sha256 "1eb665522e302e8025ea8abc9f9e62d04c3e0518e406ab013100d2364b92c94e"
   head "https://github.com/kubernetes/kops.git"
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "6a027731d8100218a3527395037d27f975b34cde7fe9759f9c1160e71bec2357" => :high_sierra
-    sha256 "c3033753fbc5ce230279dd08982db353cb50b5338a7e34e2ccc389ab1acc9c07" => :sierra
-    sha256 "189a6f76f16e9df99d24a86803dfde236cd1408ad1567c7e80b565babce8a707" => :el_capitan
   end
 
   depends_on "go" => :build
-  # Removed dependency to decouple version pinning
-  # depends_on "ffxblue/custom/kubernetes-cli@1.7.6"
+  depends_on "kubernetes-cli"
 
   def install
     ENV["VERSION"] = version unless build.head?
